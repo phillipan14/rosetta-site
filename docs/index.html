@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosetta — Translate any screen, instantly</title>
+<meta name="description" content="Rosetta turns any screenshot into a translation that lives right where the original text was. 30+ languages, on-device, no account needed.">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --ink: #1a1a1a;
+    --muted: #6b6660;
+    --accent: #c8553d;
+    --line: #e8e2d8;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 56px; }
+  header .logo {
+    width: 44px; height: 44px; border-radius: 11px;
+    background: linear-gradient(135deg, #c8553d 0%, #e08163 100%);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-style: italic; font-weight: 600;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+  }
+  header .name { font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin: 0 0 20px;
+  }
+  h1 em { color: var(--accent); font-style: italic; }
+  .lede { font-size: 19px; color: var(--muted); margin: 0 0 32px; }
+  .cta {
+    display: inline-block;
+    background: var(--ink); color: var(--bg);
+    padding: 12px 22px; border-radius: 10px;
+    text-decoration: none; font-weight: 500;
+    font-size: 15px;
+  }
+  .cta:hover { background: var(--accent); color: white; }
+  section { margin-top: 56px; }
+  section h2 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+  }
+  ul { padding-left: 22px; margin: 0; }
+  li { margin-bottom: 8px; color: var(--ink); }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .card h3 {
+    margin: 0 0 8px; font-size: 15px; font-weight: 600;
+  }
+  .card p { margin: 0; color: var(--muted); font-size: 14px; }
+  footer {
+    margin-top: 80px; padding-top: 32px;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+    display: flex; gap: 24px; flex-wrap: wrap;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @media (max-width: 540px) {
+    h1 { font-size: 34px; }
+    .grid { grid-template-columns: 1fr; }
+    .wrap { padding: 40px 20px 64px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">R</div>
+    <div class="name">Rosetta</div>
+  </header>
+
+  <h1>Translate any screen, <em>instantly</em>.</h1>
+  <p class="lede">Snap a screenshot — Rosetta reads it and shows the translation right where the original text was. No copy-paste. No retyping. Just snap and read.</p>
+
+  <a class="cta" href="https://apps.apple.com/app/rosetta-translate/id6753003001">Download on the App Store</a>
+
+  <section>
+    <h2>Built for speed</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Back Tap to translate</h3>
+        <p>Double-tap the back of your iPhone to capture and translate in a single move.</p>
+      </div>
+      <div class="card">
+        <h3>Stack screenshots</h3>
+        <p>Translate a batch at once and swipe between them.</p>
+      </div>
+      <div class="card">
+        <h3>Region select</h3>
+        <p>Drag a box around just the part you care about.</p>
+      </div>
+      <div class="card">
+        <h3>Pinyin mode</h3>
+        <p>For Chinese, see romanization above each character.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>30+ languages</h2>
+    <p style="color: var(--muted); margin: 0;">Chinese (Simplified &amp; Traditional), English, Japanese, Korean, Spanish, French, German, Italian, Portuguese, Russian, Arabic, Hindi, Vietnamese, Thai, Indonesian, Turkish, Polish, Dutch, Ukrainian, and more.</p>
+  </section>
+
+  <section>
+    <h2>Private by default</h2>
+    <ul>
+      <li>No account, no sign-in, no email</li>
+      <li>Translation runs on your device by default</li>
+      <li>Optional: auto-delete screenshots after translating</li>
+      <li>Rosetta never reads other photos in your library</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="/rosetta-site/privacy/">Privacy</a>
+    <a href="/rosetta-site/support/">Support</a>
+    <a href="mailto:phillipan14@gmail.com">phillipan14@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>

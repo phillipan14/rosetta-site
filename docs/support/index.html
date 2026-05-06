@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosetta — Support</title>
+<meta name="description" content="Get help with Rosetta — common questions and how to reach support.">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --ink: #1a1a1a;
+    --muted: #6b6660;
+    --accent: #c8553d;
+    --line: #e8e2d8;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+  .crumb { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+  .crumb a { color: var(--muted); text-decoration: none; }
+  .crumb a:hover { color: var(--accent); }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400; font-size: 36px;
+    letter-spacing: -0.01em; margin: 0 0 12px;
+  }
+  .lede { color: var(--muted); font-size: 17px; margin: 0 0 32px; }
+  h2 {
+    font-family: Georgia, serif; font-size: 22px; font-weight: 400;
+    margin: 36px 0 12px;
+  }
+  details {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 10px; padding: 16px 20px; margin-bottom: 12px;
+  }
+  details[open] { background: white; }
+  summary {
+    cursor: pointer; font-weight: 600;
+    list-style: none; position: relative; padding-right: 24px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+"; position: absolute; right: 0; top: 0;
+    color: var(--muted); font-weight: 400; font-size: 18px;
+  }
+  details[open] summary::after { content: "−"; }
+  details p { margin: 12px 0 0; color: var(--ink); }
+  details p:last-child { margin-bottom: 0; }
+  details code { background: rgba(0,0,0,0.04); padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+  a { color: var(--accent); }
+  .contact {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 24px;
+    margin-top: 32px;
+  }
+  .contact h3 { margin: 0 0 8px; }
+  .contact p { margin: 0; color: var(--muted); }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer a { color: var(--muted); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/rosetta-site/">← Rosetta</a></div>
+
+  <h1>Support</h1>
+  <p class="lede">Common questions about using Rosetta.</p>
+
+  <h2>Getting started</h2>
+
+  <details>
+    <summary>How do I translate a screenshot?</summary>
+    <p>Take a screenshot in any app — chat, menu, news article, manga. Open Rosetta and the translation is already done. Translation chips appear over the original text, exactly where you were reading.</p>
+  </details>
+
+  <details>
+    <summary>How do I set up Back Tap to translate?</summary>
+    <p>Open <strong>iOS Settings → Accessibility → Touch → Back Tap</strong>. Choose <strong>Double Tap</strong> or <strong>Triple Tap</strong> and scroll down to <strong>Shortcuts</strong> — pick the Rosetta shortcut. Then double-tapping the back of your iPhone captures a screenshot and opens it in Rosetta automatically.</p>
+  </details>
+
+  <details>
+    <summary>What languages does Rosetta support?</summary>
+    <p>30+ languages, including Chinese (Simplified &amp; Traditional), English, Japanese, Korean, Spanish, French, German, Italian, Portuguese, Russian, Arabic, Hindi, Vietnamese, Thai, Indonesian, Turkish, Polish, Dutch, and Ukrainian.</p>
+  </details>
+
+  <h2>Privacy &amp; data</h2>
+
+  <details>
+    <summary>Does Rosetta read all my photos?</summary>
+    <p>No. Rosetta only looks at your <strong>screenshots</strong>. Other photos in your library are never read. You can revoke photo access at any time in <strong>iOS Settings → Privacy &amp; Security → Photos → Rosetta</strong>.</p>
+  </details>
+
+  <details>
+    <summary>Is my data sent to a server?</summary>
+    <p>By default, no. Rosetta uses Apple's <strong>on-device</strong> translation framework. Translations stay on your phone. The only exception is the optional "Claude AI translation" mode — and only if you enable it and provide your own Anthropic API key.</p>
+    <p>See the full <a href="/rosetta-site/privacy/">privacy policy</a> for details.</p>
+  </details>
+
+  <details>
+    <summary>How do I auto-delete screenshots after translating?</summary>
+    <p>In Rosetta → <strong>Settings → Privacy</strong>, turn on <strong>Auto-delete screenshots after translating</strong>. After a translation completes, the source screenshot is moved to your Recently Deleted album.</p>
+  </details>
+
+  <h2>Troubleshooting</h2>
+
+  <details>
+    <summary>The translation didn't appear — what should I do?</summary>
+    <p>1. Make sure you've granted Photos access (iOS Settings → Privacy &amp; Security → Photos → Rosetta → Full Access).</p>
+    <p>2. Check that the screenshot actually contains text — Rosetta needs OCR-readable characters.</p>
+    <p>3. Try opening the screenshot manually from <strong>Library</strong> inside Rosetta.</p>
+    <p>If it still doesn't work, use Settings → <strong>Help &amp; feedback → Report a bug</strong> — we read every report.</p>
+  </details>
+
+  <details>
+    <summary>Pinyin isn't showing for Chinese text</summary>
+    <p>Open the translated screenshot, tap the <strong>Aa</strong> button at the top, and toggle <strong>Pinyin</strong> on. Pinyin only displays for Simplified and Traditional Chinese sources.</p>
+  </details>
+
+  <details>
+    <summary>Can I use Rosetta offline?</summary>
+    <p>Yes. The default on-device translation works without internet. The first time you use a new language pair, iOS may prompt you to download the language model — that one download requires a connection.</p>
+  </details>
+
+  <div class="contact">
+    <h3>Still need help?</h3>
+    <p>Email <a href="mailto:phillipan14@gmail.com">phillipan14@gmail.com</a> — usually a reply within a day or two.</p>
+  </div>
+
+  <footer>
+    <a href="/rosetta-site/">← Back to Rosetta</a> &nbsp;·&nbsp; <a href="/rosetta-site/privacy/">Privacy</a>
+  </footer>
+</div>
+</body>
+</html>

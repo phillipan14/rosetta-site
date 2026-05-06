@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosetta — Privacy Policy</title>
+<meta name="description" content="Rosetta privacy policy — what data the app touches, where it goes, and what you can do about it.">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --ink: #1a1a1a;
+    --muted: #6b6660;
+    --accent: #c8553d;
+    --line: #e8e2d8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+  .crumb { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+  .crumb a { color: var(--muted); text-decoration: none; }
+  .crumb a:hover { color: var(--accent); }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400; font-size: 36px;
+    letter-spacing: -0.01em; margin: 0 0 8px;
+  }
+  .updated { color: var(--muted); font-size: 14px; margin: 0 0 32px; font-style: italic; }
+  h2 {
+    font-family: Georgia, serif; font-size: 22px; font-weight: 400;
+    margin: 40px 0 12px;
+  }
+  h3 {
+    font-size: 16px; font-weight: 600;
+    margin: 24px 0 8px;
+  }
+  p { margin: 0 0 14px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+  a { color: var(--accent); }
+  .lede { font-size: 17px; color: var(--ink); }
+  .lede strong { background: rgba(200, 85, 61, 0.08); padding: 1px 4px; border-radius: 3px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer a { color: var(--muted); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/rosetta-site/">← Rosetta</a></div>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 4 May 2026</p>
+
+  <p class="lede">Rosetta is a translation app for iOS. This page explains exactly what data the app touches, where it goes, and what you can do about it. The short version: <strong>almost nothing leaves your device unless you opt in.</strong></p>
+
+  <hr>
+
+  <h2>What Rosetta accesses on your device</h2>
+
+  <h3>Photos library</h3>
+  <p>With your permission (granted via the standard iOS prompt), Rosetta reads your screenshots so it can detect and translate the text in them. It does <strong>not</strong> read any other photos. Permission can be revoked at any time in <strong>iOS Settings → Privacy &amp; Security → Photos → Rosetta</strong>.</p>
+
+  <h3>Camera</h3>
+  <p>With your permission, Rosetta can use the camera to translate signs, menus, and printed text in real time. Frames are processed <strong>on-device only</strong> — nothing is uploaded. Permission can be revoked at any time in <strong>iOS Settings → Privacy &amp; Security → Camera → Rosetta</strong>.</p>
+
+  <h3>What is stored locally</h3>
+  <p>Rosetta keeps a short translation history (up to the last 30 sessions), your saved glossary entries, and your preference settings. All of this lives on your device. None of it is sent to a Rosetta-operated server.</p>
+
+  <hr>
+
+  <h2>On-device translation</h2>
+  <p>By default, Rosetta uses Apple's <strong>on-device</strong> translation framework. The text you translate stays on your phone and is never sent to a network service for translation.</p>
+
+  <h2>Optional: Claude AI translation</h2>
+  <p>If you turn on "Claude AI translation" in Settings and enter your own Anthropic API key, the source text is sent over HTTPS to Anthropic's API for translation, using <strong>your</strong> key. Rosetta does not see, store, or proxy your API key. It is held in iOS's standard <code>UserDefaults</code> on your device, like any other app preference.</p>
+  <p>If you don't enable this option, no translation data ever leaves your device.</p>
+
+  <hr>
+
+  <h2>Crash and bug reports</h2>
+  <p>If a crash occurs and you have not disabled diagnostics, Rosetta sends a crash report to our error-tracking service (Sentry). The report contains:</p>
+  <ul>
+    <li>The line of code that crashed</li>
+    <li>iOS version, device model, and Rosetta version</li>
+    <li>A timestamp</li>
+  </ul>
+  <p>It does <strong>not</strong> contain the contents of any translation, screenshot, or glossary entry.</p>
+  <p>If you submit a bug report manually via Settings → Help &amp; feedback → Report a bug, the report includes whatever you typed plus the same device-context fields. You decide what to include.</p>
+
+  <hr>
+
+  <h2>Analytics</h2>
+  <p>Rosetta records anonymous usage events (e.g., "user opened gallery mode," "user swapped languages") to understand which features matter. These events are not tied to any account or device identifier.</p>
+  <p>You can opt out at any time by disabling crash reporting in <strong>iOS Settings → Privacy &amp; Security → Analytics &amp; Improvements</strong>.</p>
+
+  <hr>
+
+  <h2>Children's privacy</h2>
+  <p>Rosetta is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If we materially change this policy, we will update the "Last updated" date at the top and surface a notice in the app's Settings → Privacy section.</p>
+
+  <hr>
+
+  <h2>Contact</h2>
+  <p>Questions or requests about your data: <a href="mailto:phillipan14@gmail.com">phillipan14@gmail.com</a></p>
+  <p>The app is owned and operated by Phillip An.</p>
+
+  <footer>
+    <a href="/rosetta-site/">← Back to Rosetta</a>
+  </footer>
+</div>
+</body>
+</html>
