@@ -1,0 +1,13 @@
+{
+  "name": "Rosetta Translate",
+  "short_name": "Rosetta",
+  "description": "Translate any screen instantly. Snap a screenshot, see the translation right where the original text was.",
+  "start_url": "/rosetta-site/",
+  "display": "browser",
+  "theme_color": "#faf7f2",
+  "background_color": "#faf7f2",
+  "icons": [
+    { "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" },
+    { "src": "og-image.png", "sizes": "1200x630", "type": "image/png" }
+  ]
+}
