@@ -203,6 +203,34 @@
     background: var(--card);
   }
 
+  .demo {
+    margin-top: var(--space-section);
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  }
+  .demo-video {
+    width: 100%; max-width: 320px;
+    border-radius: 22px;
+    box-shadow: var(--shadow-shot);
+    aspect-ratio: 1290 / 2796;
+    background: var(--card);
+    display: block;
+  }
+  .demo-lang {
+    display: inline-flex; background: var(--card);
+    border-radius: 999px; padding: 4px;
+    border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+    font-size: 0.875rem; font-weight: 600;
+  }
+  .demo-lang button {
+    background: transparent; border: none; color: var(--muted);
+    padding: 0.4rem 1rem; border-radius: 999px;
+    cursor: pointer; font: inherit;
+    transition: background 0.15s, color 0.15s;
+  }
+  .demo-lang button[aria-pressed="true"] {
+    background: var(--accent); color: white;
+  }
+
   section { margin-top: var(--space-section); }
   .eyebrow {
     font-size: var(--fs-eyebrow); font-weight: 700; letter-spacing: 0.14em;
@@ -439,6 +467,32 @@
       <img src="screenshot-hero.png" alt="Rosetta on iPhone — translation chips appearing right where the original Chinese text was" loading="eager" decoding="async">
     </div>
   </div>
+
+  <div class="demo" aria-label="Rosetta product demo">
+    <video id="demo-video" class="demo-video" controls preload="metadata" poster="screenshot-hero.png" playsinline>
+      <source src="demo-en.mp4" type="video/mp4">
+    </video>
+    <div class="demo-lang" role="group" aria-label="Video language">
+      <button type="button" aria-pressed="true" data-src="demo-en.mp4">English</button>
+      <button type="button" aria-pressed="false" data-src="demo-zh.mp4">中文</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var video = document.getElementById('demo-video');
+      var buttons = document.querySelectorAll('.demo-lang button');
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          buttons.forEach(function(b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+          var wasPlaying = !video.paused;
+          video.src = btn.dataset.src;
+          video.load();
+          if (wasPlaying) video.play();
+        });
+      });
+    })();
+  </script>
 
   <section aria-labelledby="loop-h">
     <div class="eyebrow">The loop Rosetta kills</div>
