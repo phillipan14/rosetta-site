@@ -129,7 +129,7 @@
   nav {
     display: flex; align-items: center; justify-content: space-between;
     margin-bottom: clamp(2rem, 5vw, 3.5rem);
-    position: sticky; top: 0;
+    position: sticky; top: env(safe-area-inset-top, 0);
     padding: 14px 0;
     background: color-mix(in srgb, var(--bg) 92%, transparent);
     backdrop-filter: saturate(150%) blur(12px);
@@ -208,7 +208,7 @@
     display: flex; flex-direction: column; align-items: center; gap: 1rem;
   }
   .demo-video {
-    width: 100%; max-width: 320px;
+    width: 100%; max-width: clamp(300px, 60vw, 420px);
     border-radius: 22px;
     box-shadow: var(--shadow-shot);
     aspect-ratio: 1290 / 2796;
@@ -223,7 +223,8 @@
   }
   .demo-lang button {
     background: transparent; border: none; color: var(--muted);
-    padding: 0.4rem 1rem; border-radius: 999px;
+    padding: 0.55rem 1.1rem; border-radius: 999px;
+    min-height: 40px;
     cursor: pointer; font: inherit;
     transition: background 0.15s, color 0.15s;
   }
@@ -244,29 +245,6 @@
   }
   section h2 em { color: var(--accent); font-style: italic; }
   section .sub { font-size: var(--fs-lede); color: var(--muted); margin: 0 0 2rem; max-width: 52ch; }
-
-  /* The Loop section */
-  .loop {
-    background: var(--card); border: 1px solid var(--line);
-    border-radius: 18px; padding: clamp(1.5rem, 4vw, 2.25rem);
-    margin-top: var(--space-block);
-  }
-  .loop-steps {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin-bottom: 1rem; color: var(--bad); font-weight: 500;
-    font-size: var(--fs-small);
-  }
-  .loop-steps span {
-    background: color-mix(in srgb, var(--bad) 12%, transparent);
-    padding: 6px 12px; border-radius: var(--radius-pill);
-  }
-  .loop-steps .arrow { background: transparent; padding: 6px 2px; color: var(--faint); }
-  .loop-killed {
-    margin-top: 1.25rem; padding-top: 1.25rem;
-    border-top: 1px solid var(--line);
-    font-size: var(--fs-lede); color: var(--ink); line-height: 1.5;
-  }
-  .loop-killed strong em { color: var(--accent); font-style: italic; }
 
   /* How it works */
   .steps {
@@ -350,24 +328,6 @@
     font-size: 18px;
   }
   .privacy p { margin: 0; color: var(--muted); font-size: var(--fs-small); padding-left: 42px; line-height: 1.55; }
-
-  /* Founder */
-  .founder {
-    background: var(--card); border: 1px solid var(--line);
-    border-radius: 18px; padding: clamp(1.5rem, 3vw, 1.75rem);
-    display: flex; gap: 20px; align-items: flex-start;
-  }
-  .founder .ñ {
-    flex-shrink: 0;
-    width: 44px; height: 44px; border-radius: 11px;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-bright) 100%);
-    display: flex; align-items: center; justify-content: center;
-    color: white; font-family: Georgia, serif; font-style: italic;
-    font-weight: 600; font-size: 20px;
-  }
-  .founder p { margin: 0 0 10px; font-size: 15px; color: var(--ink); line-height: 1.55; }
-  .founder em { color: var(--accent); font-style: normal; font-weight: 600; }
-  .founder .sig { color: var(--muted); font-size: 13px; }
 
   /* FAQ */
   details.faq {
@@ -473,7 +433,7 @@
   </div>
 
   <div class="demo" aria-label="Rosetta product demo">
-    <video id="demo-video" class="demo-video" controls preload="metadata" poster="screenshot-hero.png" playsinline>
+    <video id="demo-video" class="demo-video" controls preload="metadata" poster="demo-poster.png" playsinline>
       <source src="demo-en.mp4" type="video/mp4">
     </video>
     <div class="demo-lang" role="group" aria-label="Video language">
