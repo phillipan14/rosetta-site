@@ -325,7 +325,11 @@
   .showcase .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .showcase-caption {
     text-align: center; font-size: var(--fs-small);
-    color: var(--muted); margin-top: 8px;
+    color: var(--ink); font-weight: 600; margin-top: 10px;
+  }
+  .showcase-sub {
+    text-align: center; font-size: var(--fs-small);
+    color: var(--muted); margin-top: 2px; line-height: 1.45;
   }
   .shot-cell { display: flex; flex-direction: column; }
 
@@ -454,7 +458,7 @@
   <div class="hero">
     <div class="hero-copy">
       <h1>Stop copy-pasting screenshots into <em>Translate</em>.</h1>
-      <p class="lede">You know the loop — <strong>screenshot, switch to Translate, paste the image, wait, squint at the cropped result, switch back.</strong> Rosetta kills it. Snap a screenshot and the translation appears <em>right where the original text was</em>.</p>
+      <p class="lede">Screenshot anything you can't read. Rosetta picks it up automatically and lays the translation <em>right where the original text was</em> — no app-switching, no cropped output, no squinting.</p>
       <div class="cta-row">
         <a class="cta" href="https://apps.apple.com/app/rosetta-translate/id6766508379" target="_blank" rel="noopener" aria-label="Download Rosetta on the App Store">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -494,32 +498,6 @@
     })();
   </script>
 
-  <section aria-labelledby="loop-h">
-    <div class="eyebrow">The loop Rosetta kills</div>
-    <h2 id="loop-h">Reading a foreign screen right now <em>sucks.</em></h2>
-    <p class="sub">Whether it's a Japanese menu, a Chinese tweet, a German error message, or a Korean game UI — the only way to read it is the loop. Screenshot, switch apps, paste, wait, squint, switch back.</p>
-    <div class="loop">
-      <div class="loop-steps" aria-label="The current image-translation loop">
-        <span>see foreign text</span>
-        <span class="arrow">→</span>
-        <span>screenshot</span>
-        <span class="arrow">→</span>
-        <span>switch to Translate</span>
-        <span class="arrow">→</span>
-        <span>paste image</span>
-        <span class="arrow">→</span>
-        <span>wait for OCR</span>
-        <span class="arrow">→</span>
-        <span>squint at the crop</span>
-        <span class="arrow">→</span>
-        <span>switch back</span>
-      </div>
-      <div class="loop-killed">
-        <strong>Rosetta kills the loop.</strong> Take a screenshot and Rosetta automatically reads it, runs the translation, and lays each translated phrase right where the original was. <strong><em>No switching apps.</em></strong> Double-tap the back of your iPhone to do it without opening anything.
-      </div>
-    </div>
-  </section>
-
   <section aria-labelledby="how-h">
     <div class="eyebrow">How it works</div>
     <h2 id="how-h">Two taps. <em>Or zero</em> with Back Tap.</h2>
@@ -544,7 +522,7 @@
 
   <section aria-labelledby="features-h">
     <div class="eyebrow">Built for speed</div>
-    <h2 id="features-h">The little things <em>nobody</em> else does.</h2>
+    <h2 id="features-h">What makes it <em>fast</em>.</h2>
     <div class="features">
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="6.5" stroke-dasharray="2.4 2.4"/></svg></div>
@@ -567,9 +545,9 @@
         <p>For Chinese, see romanization above each character so you can actually pronounce what you're reading.</p>
       </div>
       <div class="feature">
-        <div class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3l2-2.5h8L18 7h3a1 1 0 011 1v11a1 1 0 01-1 1H3a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg></div>
-        <h3>Live camera mode</h3>
-        <p>Point your camera at a sign or menu and read the translation in real time, no screenshot needed.</p>
+        <div class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v5a2 2 0 002 2h12a2 2 0 002-2v-5"/><path d="M12 3v11M8 10l4 4 4-4"/></svg></div>
+        <h3>Auto-pickup</h3>
+        <p>Just take screenshots — anywhere, in any app. When you open Rosetta, they're already queued and already translating.</p>
       </div>
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><line x1="3.5" y1="12" x2="20.5" y2="12"/></svg></div>
@@ -585,14 +563,17 @@
       <div class="shot-cell">
         <div class="shot"><img src="screenshot-select.png" alt="Tap Select to grab any phrase — toolbar highlights the Select mode" loading="lazy" decoding="async"></div>
         <div class="showcase-caption">Tap to select</div>
+        <div class="showcase-sub">Drag a box, grab just the phrase you want.</div>
       </div>
       <div class="shot-cell">
         <div class="shot"><img src="screenshot-stack.png" alt="A batch of translated screenshots — every comment, reply, and tiny caption picked up" loading="lazy" decoding="async"></div>
         <div class="showcase-caption">Stack &amp; swipe</div>
+        <div class="showcase-sub">Batch translate a whole flow — comments, replies, captions.</div>
       </div>
       <div class="shot-cell">
         <div class="shot"><img src="screenshot-split.png" alt="Split-view — original Chinese on top, English translation on the bottom, both scrolling together" loading="lazy" decoding="async"></div>
         <div class="showcase-caption">Split-view</div>
+        <div class="showcase-sub">Original on top, English below — scroll together.</div>
       </div>
     </div>
   </section>
@@ -618,12 +599,6 @@
         <p>For tricky stuff (handwriting, dense text, mixed languages), you can swap in your own AI provider key in Settings to use a cloud model. Cloud requests are not stored.</p>
       </div>
     </div>
-  </section>
-
-  <section aria-labelledby="languages-h">
-    <div class="eyebrow">Languages</div>
-    <h2 id="languages-h">Thirty-plus, growing.</h2>
-    <p class="sub">Chinese (Simplified + Traditional), English, Japanese, Korean, Spanish, French, German, Italian, Portuguese, Russian, Arabic, Hindi, Vietnamese, Thai, Indonesian, Turkish, Polish, Dutch, Ukrainian, and more. New languages roll out as Apple adds them.</p>
   </section>
 
   <section aria-labelledby="faq-h">
